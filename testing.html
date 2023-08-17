@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Flex container for the layout */
+        .container {
+            display: grid;
+            grid-template-columns: 15% auto;
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #ff9900;
+        }
+
+        /* Form styling */
+        .form {
+            padding: 20px;
+            background-color: #f2f2f2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+            gap: 10px; /* Gap between columns */
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%; /* Expand input to fill the column */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <i class="fa fa-h-square" aria-hidden="true"></i>
+            <h1>Hospital Management System</h1>
+            <h2><a href="Login.php">Admin</a></h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <!-- List of links goes here -->
+            </ul>
+        </div>
+        <div class="form">
+            <form action="" method="post">
+                <input type="number" name="id" placeholder="ID">
+                <input type="text" name="img_url" placeholder="Image URL">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="address" placeholder="Address">
+                <input type="number" name="phone" placeholder="Phone">
+                <input type="text" name="x" placeholder="X">
+                <input type="number" name="ion_user_id" placeholder="ION User ID">
+                <input type="number" name="hospital_id" placeholder="Hospital ID">
+                <button type="submit" name="Add" id="add">Submit</button>
+                <button name="exit" id="exit" formaction="logout1.php">Exit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

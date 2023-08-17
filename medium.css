@@ -1,0 +1,143 @@
+/* Form container */
+.column {
+    max-width: 100%;
+    margin-left: 155px;
+    margin-right: 100px;
+    margin-top: 2%;
+    
+    /* margin: 0 auto; */
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    display: grid; /* Use CSS Grid to create four columns */
+    grid-template-columns: repeat(4, 1fr); /* Divide the form into four equal columns */
+    grid-gap:40px; /* Add some spacing between the columns and rows */
+  }
+  
+  /* Form fields */
+  .form input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border: 5px solid #57c6fa;
+    border-radius: 5px;
+    outline: none;
+  }
+  /* Placeholder text color */
+  .form input::placeholder {
+    color: #888;
+  }
+  
+  /* Focus styles */
+  .form input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 6px #4CAF50;
+  }
+  
+  /* Submit button (you can add it if needed) */
+  .form button {
+    grid-column: span 4; /* Make the button span across all four columns */
+    background-color: #57c6fa;
+    color: white;
+    cursor: pointer;
+    width: 20%;
+    margin-left: 40%;
+    border-radius: 10px;
+    margin-bottom: 1%;
+    height: 30px;
+    border: none;
+  }
+  .form button #add{
+   float: left;
+    
+  }
+  
+  /* Button hover effect */
+  .form button:hover {
+    background-color: #45a049;
+  }
+  .navbar{
+    color: black;
+    padding: 0%;
+    margin-top: 0%;
+    background: turquoise;
+
+    
+}
+.navbar h1{
+margin-top: 0;
+margin-bottom: 0;
+text-align: center;
+}
+.navbar h2{
+margin-top: -2%;
+margin-bottom: 0;
+text-align: left;
+}
+ .sidebar {
+width: 10%;
+background-color:aqua;
+padding: 40px;
+height:290vh;
+float: left; 
+text-align: left;
+
+padding-left: 5%;
+padding-right: 5%;
+/* Add this property to make the sidebar float to the left */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.sidebar ul li a{
+  right: 0;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+a{
+    text-decoration: none;
+    font-size: small;
+}
+
+.card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.fa {
+    color: blue;
+}
+.name {
+  color: black;
+  padding: 0%;
+  margin-top: 2px;
+  background: turquoise;
+  text-align: center;
+
+}
+.name h2{
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+  ul{
+    list-style: none;
+    float: left;
+    
+  }

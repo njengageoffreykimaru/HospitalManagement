@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dashboard</title>
+
+    <style>
+       /* Navbar styling */
+       .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar a{
+            color: aliceblue;
+        }
+       .sidebar {
+            width: 10%;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            color: #ff9900;
+        }
+        
+     
+        .dashboard {
+            padding: 20px;
+            display: flex;
+            flex-direction:column;
+            grid-template-columns: repeat(8, 1fr); /* 8 equal columns */
+            gap: 10px; /*Gap between columns*/
+            width: 100%;
+      }  
+
+        a{
+            text-decoration: none;
+            font-size: small;
+        }
+      
+
+    .card {
+        background-color: #f1f1f1;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%; /* Expand input to fill the column */
+    }
+     
+        
+        .card h3 {
+            margin-top: 0;
+        }
+        
+        .fa {
+            color: rgb(11, 11, 11);
+        }
+        .sidebar ul {
+            list-style: none;
+            font-size: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+         /* .name{
+            background-color: #333;
+            font-size: large;
+            
+        } 
+        .name h2{
+            color: #f1f1f1;
+            
+        }  */
+    </style>
+   
+
+</head>
+<body>
+    <header>
+    <div class="navbar">
+       
+        <h1>Hospital Management System </h1>
+        <h2><a href="Login.php">Admin</a></h2>
+        
+    </div>
+    </header>
+    <!-- <div class="name">
+       <h2>home</h2>
+        <a href="hospital.php">Hospital</a>
+        <a href="group.php">Group</a>
+        <a href="report.php">Report</a>
+        <a href="setting.php">Settings</a>
+
+    </div> -->
+    <div class="container">
+<div class="sidebar">
+    
+    <ul>
+      <li><a href="accountant.php">Accountant</a></li>
+      <li><a href="allergy.php">Allergy</a></li>
+      <li><a href="assessment_continue.php">Assessment Continue</a></li>
+      <li><a href="assessment_info.php">Assessment_info</a></li>
+      <li><a href="assessment_notes.php">Assessment_notes</a></li>
+      <li><a href="bankd.php">BloodBank</a></li>
+      <li><a href="bed.php">Bed</a></li>
+      <li><a href="cardiovascular_info.php">Cardiovascular_info</a></li>
+      <li><a href="casemanagement.php">Case Management</a></li>
+      <li><a href="chat.php">Chat </a></li>
+      <li><a href="deparrtment.php">Department</a></li>
+      <li><a href="discharge_info.php">Discharge info</a></li>
+      <li><a href="doctor.php">Doctor</a></li>
+      <li><a href="donor.php">Donor</a></li>
+      <li><a href="eent_info.PHP">Eeeint info</a></li>
+      <li><a href="elopment.php">Elopment info</a></li>
+      <li><a href="events.php">Events</a></li>
+      <li><a href="expense.php">Expense</a></li>
+      <li><a href="expensecategory.php">Expense Category</a></li>
+      <li><a href="fetalrisk.php">Fetal Risk</a></li>
+      <li><a href="assessment_notes.php">Assessment_notes</a></li>
+      <li><a href="flowchart.php">Flowchart</a></li>
+      <li><a href="genitourinary_info.php">Genitourinary_info</a></li>
+      <li><a href="gastrointestinal_info.php">Gastrointestinal</a></li>
+      <li><a href="group.php">Group</a></li>
+      <li><a href="hospital.php">Hospital</a></li>
+      <li><a href="imagining.php">Imagining</a></li>
+      <li><a href="laborist.php">Laborist</a></li>
+      <li><a href="labs.php">Lab</a></li>
+      <li><a href="donor.php">Donor</a></li>
+      <li><a href="login_attempts.php">Logins attempts</a></li>
+      <li><a href="medication.php">Medication</a></li>
+      <li><a href="medicine.php">Medicine</a></li>
+      <li><a href="medicinecategory.php">Medicinecategory</a></li>
+      <li><a href="medicinedata.php">Medicinedata</a></li>
+      <li><a href="neurologic_info.php">Neurologic_info</a></li>
+      <li><a href="notes_info.php">Notes info</a></li>
+      <li><a href="nurse.php">Nurse</a></li>
+      <li><a href="patients.php">Patient</a></li>
+      <li><a href="payment.php">Payment</a></li>
+      <li><a href="paymentcategory.php">Paymentcategory</a></li>
+      <li><a href="pharmacist.php">Pharmacy</a></li>
+      <li><a href="physician_order.php">Physician_order</a></li>
+      <li><a href="problems_info.php">Problem info</a></li>
+      <li><a href="Pulmonary_info.php">Pulmonary_info</a></li>
+      <li><a href="readiness.php">Readiness</a></li>
+      <li><a href="report.php">Report</a></li>
+      <li><a href="resipotory.php">Respiratory</a></li>
+      <li><a href="resuscitation.php">Resuscitation</a></li>
+      <li><a href="setting.php">Setting</a></li>
+      <li><a href="therapynotes.php">Therapy notes</a></li>
+      <li><a href="user_groups.php">Users</a></li>
+      <li><a href="revised_flowchart.php">Revised Flowchart</a></li>
+      <li><a href="revised_physician.php">Revised Physcian</a></li>
+      
+      <li><a href="skinassessment.php">Skin Assessment</a></li>
+      <li><a href="skin_info.php">Skin info</a></li>
+      <li><a href="user.php">User</a></li>
+      <li><a href="vitalsings.php">Vital signs</a></li>
+      <li><a href="wounddescription_info.php">Wounddescription_info</a></li>
+      <li><a href="painassessment.php">Pain assessment</a></li>
+      <li><a href="musculoskeletal_info.php">Musculoskeletal_info</a></li>
+      <li><a href="allotedbed.php">Alloted Bed</a></li>
+      <li><a href="revised_respiratory.php">Revised Respiratory</a></li>
+    </ul>
+  </div>
+    <div class="dashboard">
+        <div class="card">
+            
+            <i class="fa fa-money" aria-hidden="true"></i>
+            <h3><a href="accountant.php">accountant</a></h3>
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            <h3><a href="allergy.php">allergy</a></h3>
+
+           
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-american-sign-language-interpreting" aria-hidden="true"></i>
+            <h3><a href="assessment_continue.php">Assessment Continue</a></h3>
+           
+
+           
+        </div>
+        <div class="card">
+            <i class="fa fa-info" aria-hidden="true"></i>
+
+            <h3><a href="assessment_info.php">Assessment_info</a></h3>
+           
+        </div>
+        <div class="card">
+            <i class="fa fa-comment" aria-hidden="true"></i>
+            <h3><a href="assessment_notes.php">Assessment_notes</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <h3><a href="bankd.php">BloodBank</a></h3>
+           
+        </div>
+        <div class="card">
+            <i class="fa fa-bed" aria-hidden="true"></i>
+            <h3><a href="bed.php">Bed</a></h3>
+
+        </div>
+        <div class="card">
+            <i class="fa fa-bed" aria-hidden="true"></i>
+            <h3><a href="bedcategory.php">Bed category</a></h3>
+
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-id-card" aria-hidden="true"></i>
+            <h3><a href="cardiovascular_info.php">Cardiovascular_info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+            <h3><a href="casemanagement.php">Case Management</a></h3>
+        </div>
+        <div class="card">
+
+            <i class="fa fa-comment-o" aria-hidden="true"></i>
+            <h3><a href="chat.php">Chat</a></h3>
+        </div>
+        <div class="card">
+           
+            <i class="fa fa-outdent" aria-hidden="true"></i>
+            <h3><a href="deparrtment.php">Department</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-medkit" aria-hidden="true"></i>
+            <h3><a href="discharge_info.php">Discharge info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            <h3><a href="doctor.php">Doctor</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+
+            <h3><a href="donor.php">Donor</a></h3>
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-eercast" aria-hidden="true"></i>
+            <h3><a href="eent_info.PHP">Eeent Info</a></h3>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+            <h3><a href="elopment.php">Elopment Info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <h3><a href="events.php">Events</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-recycle" aria-hidden="true"></i>
+            <h3><a href="expense.php">Expense</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-recycle" aria-hidden="true"></i>
+            <h3><a href="expensecategory.php">Expense Category</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+            <h3><a href="fetalrisk.php">Fetalrisk</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            <h3><a href="flowchart.php">Flowchart</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-pinterest" aria-hidden="true"></i>
+             <h3><a href="gastroinestinal_info.php">Gastrointestinal</a></h3>
+
+        </div>
+        <div class="card">
+            <i class="fa fa-superpowers" aria-hidden="true"></i>
+            <h3><a href="gastrointestinal_info.php.">Gastrointestinal</a></h3>
+            
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-object-group" aria-hidden="true"></i>
+            <h3><a href="group.php">Group</a></h3>
+           
+        </div>
+        <div class="card">
+            <i class="fa fa-hospital-o" aria-hidden="true"></i>
+            <h3><a href="hospital.php">Hospital</a></h3>
+           
+        </div>
+        <div class="card">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            <h3><a href="imagining.php">Imagining</a></h3>
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            <h3><a href="laborist.php">Laborist</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            <h3><a href="labs.php">Lab</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-sign-in" aria-hidden="true"></i>
+            <h3><a href="login_attempts.php">Login attempts</a></h3>
+           
+        </div>
+        <div class="card">
+            <i class="fa fa-user-md" aria-hidden="true"></i>
+            <h3><a href="medication.php">Medication</a></h3>
+           
+        </div>
+        <div class="card">
+
+            <i class="fa fa-user-md" aria-hidden="true"></i>
+            <h3><a href="medicine.php">Medicine</a></h3>
+
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-user-md" aria-hidden="true"></i>
+            <h3><a href="medicinecategory.php">Medicine Category</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-user-md" aria-hidden="true"></i>
+            <h3><a href="medicinedata.php">Medicine Data</a></h3>
+
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+            <h3><a href="neurologic_info.php">Neurologic info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+            <h3><a href="neurologic.php">Neurologic</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-sticky-note" aria-hidden="true"></i>
+            <h3><a href="notes_info.php">Notes</a></h3>
+          
+        </div>
+        <div class="card">
+            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+            <h3><a href="nurse.php">Nurse</a></h3>
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="patients.php">Patient</a></h3>
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+            <h3><a href="payment.php">Payment</a></h3>
+            
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+            <h3><a href="paymentcategory.php">Payment Category</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-medkit" aria-hidden="true"></i>
+            <h3><a href="pharmacist.php">Pharmacy</a></h3>
+
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="physician_order.php">Physcian order</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-tasks" aria-hidden="true"></i>
+            <h3><a href="problems_info.php">Problem info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-heart-o" aria-hidden="true"></i>
+            <h3><a href="Pulmonary_info.php">Pulmonary_info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-reddit-square" aria-hidden="true"></i>
+            <h3><a href="readiness.php">readiness</a></h3>
+
+        </div>
+        <div class="card">
+            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+            <h3><a href="report.php">Report</a></h3>
+
+        </div>
+        <div class="card">
+            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+            <h3><a href="resipotory.php">Resipotory</a></h3>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-ravelry" aria-hidden="true"></i>
+            <h3><a href="resuscitation.php">Resuscitation</a></h3>
+            
+        </div>
+        <div class="card">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            <h3><a href="setting.php">Setting </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-stethoscope" aria-hidden="true"></i>
+            <h3><a href="therapynotes.php">Therapy notes </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="user_groups.php">Users groups </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="revised_flowchart.php">Revised flowchart </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="revised_physician.php">Revised Physcians </a></h3>
+
+        </div>
+        <div class="card">
+           <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="skinassessment.php">Skin assesment</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="skin_info.php">Skin info </a></h3>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="user.php">User</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="vascular_info.php">Vascular_info </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="vitalsings.php">Vital Signs </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="wounddescription_info.php">wound description_info</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="painassessment.php">Pain assessment</a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="musculoskeletal_info.php">musculoskeletal_info </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="allotedbed.php">Alloted </a></h3>
+        </div>
+        <div class="card">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <h3><a href="revised_respiratory.php">Revised Respiratory</a></h3>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>Contact: info@example.com | Phone: (123) 456-7890</p>
+    <p>&copy; 2023 Hospital Management System. All rights reserved.</p>
+</div>  
+</body>
+</html>
